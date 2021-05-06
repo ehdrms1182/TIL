@@ -419,7 +419,10 @@
 
 <br>
 
-참고자료 : [게임 기획 튜토리얼](https://www.slideshare.net/iyooha/2012-14158316, "PPT Link 2") 
+참고자료 : [게임 기획 튜토리얼](https://www.slideshare.net/iyooha/2012-14158316, "PPT Link 1") 
 <br>
 
-참고자료 : [쩌는 게임기획서 이렇게 쓴다](https://www.slideshare.net/phploveme/ss-30557563, "PPT Link 1")
+참고자료 : [프로그래머에게 사랑받는 기획서](https://www.slideshare.net/iyooha/20101002-53482961, "PPT Link 2")
+<br>
+
+참고자료 : [쩌는 게임기획서 이렇게 쓴다](https://www.slideshare.net/phploveme/ss-30557563, "PPT Link 3")
