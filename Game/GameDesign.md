@@ -86,7 +86,7 @@
         개미 농장 효과
         -> 규칙의 설계자인 기획자가 플레이어보다 관객에 몰입하기 쉽기 때문이다
         ```
-        관련 링크 : [개미 농장 효과](https://m.blog.naver.com/PostView.nhn?blogId=badajoa2002&logNo=18438431&proxyReferer=https:%2F%2Fwww.google.com%2F, " Link")
+        관련 링크 : [개미 농장 효과](https://m.blog.naver.com/PostView.nhn?blogId=badajoa2002&logNo=18438431&proxyReferer=https:%2F%2Fwww.google.com%2F, "Link")
              
         ### 2. 동기부여
         ```
