@@ -1,13 +1,10 @@
-
-
-펄린노이즈 알고리즘
 ``` {.unity} using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class PulinNoise : MonoBehaviour
 {
     [Header("[블록]")]
-    public GameObject prefabBlock;
+    public GameObject prefabBlock; //종류 늘릴 수 있음
 
 
     [Header("[맵 정보]")]
@@ -15,9 +12,6 @@ public class PulinNoise : MonoBehaviour
     public int mapY = 0;
     public float waveLength = 0;
     public float Amplitude = 0;
-
-    //[Header("난수")]
-    //int rand = Random.Range(1, 10);
 
     private List<GameObject> BlockList = new List<GameObject>();
     void Start()
