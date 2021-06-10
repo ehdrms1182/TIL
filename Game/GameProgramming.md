@@ -43,3 +43,37 @@ public class PulinNoise : MonoBehaviour
     }
 }
 ```
+
+```{.unity}
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FollowCam : MonoBehaviour
+{
+    public Transform target;
+    public float dist = 25.0f;
+    public float height = 50.0f;
+    public float dampRotate = 0.0f;
+
+    private Transform camPos;
+
+    // Use this for initialization
+    void Start()
+    {
+        camPos = GetComponent<Transform>();
+    }
+
+    // Update is called once per frame
+    void LateUpdate()
+    {
+
+        float currYAngle = Mathf.LerpAngle(camPos.eulerAngles.y, target.eulerAngles.y, dampRotate * Time.deltaTime);
+
+        Quaternion rot = Quaternion.Euler(0, currYAngle, 0);
+
+        camPos.position = target.position - (rot * Vector3.forward * dist) + (Vector3.up * height);
+        camPos.LookAt(target);
+    }
+}
+```
