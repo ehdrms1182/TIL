@@ -41,8 +41,6 @@ public class PulinNoise : MonoBehaviour
 
         }
     }
-}
-```
 
 ```{.unity}
 using System.Collections;
@@ -74,6 +72,75 @@ public class FollowCam : MonoBehaviour
 
         camPos.position = target.position - (rot * Vector3.forward * dist) + (Vector3.up * height);
         camPos.LookAt(target);
+    }
+}
+```
+
+
+```{.unity}
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ClickMove : MonoBehaviour
+{
+    [SerializeField]
+    private Camera cam;
+    public static bool isMove;
+    private Vector3 location;
+    public Transform character; // 추가
+
+    //private float speed = 1;
+
+    int layerMask;
+
+    private void Awake()
+    {
+        layerMask = 1 << LayerMask.NameToLayer("Ground");
+        cam = Camera.main;
+        SetLocation(character.transform.position);//시작 위치를 캐릭터 위치로 설정
+    }
+
+    void Update()
+    {
+        GetLocation();
+        Move();
+    }
+
+    private void GetLocation()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layerMask))
+            {
+                SetLocation(hit.point);
+                transform.LookAt(hit.point);//클릭 방향을 바라보게한다
+            }
+        }
+    }
+
+    private void SetLocation(Vector3 pos)
+    {
+        Debug.Log("이동지점 설정");
+        location = pos; 
+        isMove = true; 
+    }
+    
+    private void Move()
+    {
+        if (isMove)
+        {
+            if (Vector3.Distance(location, transform.position) <= 0.1f)
+            { 
+                isMove = false;
+                return; 
+            }
+            var dir = location - transform.position; //현재 방향을 설정
+
+            character.transform.position = Vector3.MoveTowards(character.transform.position,location,Time.deltaTime * 10f);//목적지까지 일정 속도로 이동
+            //transform.position += dir.normalized * Time.deltaTime * 5f; 
+        }
     }
 }
 ```
