@@ -52,13 +52,13 @@ Sales by Purchase : 사용자의 구매 활동을 통해 집계된 매출
 
 Sales by Advertisement : 광고 노출을 통해 집계된 매출
 
-CPI (Cost per Install) : 게임 다운로드 후 설치하면 보상
+CPI (Cost per Install) : 게임 다운로드 후 설치하면 지급하는 보상
 
-CPA (Cost per Action) : 설치된 앱을 실행하면 보상
+CPA (Cost per Action) : 설치된 앱을 실행하면 지급하는 보상
 
-CPP (Cost per Play) : CPA 이후 일정 기간 한번씩 실행할 때마다 보상
+CPP (Cost per Play) : CPA 이후 일정 기간 한번씩 실행할 때마다 지급하는 보상
 
-CPL (Cost per Level) : 정량적인 플레이에 대한 레벨을 설정한 뒤 보상
+CPL (Cost per Level) : 정량적인 플레이에 대한 레벨을 설정한 뒤 지급하는 보상
 
 [투자/퍼블리싱]
 
