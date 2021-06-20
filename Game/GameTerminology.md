@@ -30,7 +30,7 @@ PCU (Peak Concurrent User) : MCU 동일어
 
 ACU (Average Concurrent User) : 1일 동안의 평균 동시 접속자 수
 
-Stickness : 고착도
+Stickness : 고착도 (사용자가 상품이나 서비스를 얼마나 오래 혹은 자주 사용하는지에 대한 충성도, 혹은 그 충성도를 나타내는 지표)
 
 EU (Executed User) : 인게임을 플레이한 유저로 UV와 같이 비교대상으로 분석
 
