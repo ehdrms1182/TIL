@@ -475,7 +475,7 @@
         
         ```
     - ## 좋은 서식, 좋은 서체
-
+        
     - ## 명확한 용어,명확한 표현
 
     - ## 중복을 자제하자
@@ -514,4 +514,4 @@
 참고자료 : [프로그래머에게 사랑받는 기획서](https://www.slideshare.net/iyooha/20101002-53482961, "PPT Link 2")
 <br>
 
-참고자료 : [쩌는 게임기획서 이렇게 쓴다](https://www.slideshare.net/istoriae/how-to-write-great-design-documents-from-gdc2008-korean?qid=7adb28d0-53b6-40b2-ac24-117d7ccab64a&v=&b, "PPT Link 3")
+참고자료 : [쩌는 게임기획서 이렇게 쓴다](https://www.slideshare.net/phploveme/ss-30557563, "PPT Link 3")
