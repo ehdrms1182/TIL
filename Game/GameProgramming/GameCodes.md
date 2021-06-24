@@ -1,6 +1,7 @@
 내가 쓰거나 유용했던 코드들
 ====
 
+# 펄린노이즈를 이용한 랜덤 맵 생성 알고리즘
 ``` {.unity} using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,6 +45,10 @@ public class PulinNoise : MonoBehaviour
 
         }
     }
+}
+```
+
+# 카메라가 플레어이를 따라오게 만드는 스크립트
 
 ```{.unity}
 using System.Collections;
@@ -79,6 +84,8 @@ public class FollowCam : MonoBehaviour
 }
 ```
 
+
+# 마우스 우클릭으로 원하는 방향으로 이동하는 스크립트
 
 ```{.unity}
 using System.Collections;
