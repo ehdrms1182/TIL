@@ -18,7 +18,7 @@ public class PulinNoise : MonoBehaviour
     public float Amplitude = 0;
 
     private List<GameObject> BlockList = new List<GameObject>();
-    void Start()
+    void Awake()
     {
         for(int x = 0; x<mapX; x++)
         {
@@ -58,14 +58,13 @@ using UnityEngine;
 public class FollowCam : MonoBehaviour
 {
     public Transform target;
-    public float dist = 25.0f;
+    public float distance = 25.0f;
     public float height = 50.0f;
     public float dampRotate = 0.0f;
 
     private Transform camPos;
 
-    // Use this for initialization
-    void Start()
+    void Awake()
     {
         camPos = GetComponent<Transform>();
     }
@@ -78,7 +77,7 @@ public class FollowCam : MonoBehaviour
 
         Quaternion rot = Quaternion.Euler(0, currYAngle, 0);
 
-        camPos.position = target.position - (rot * Vector3.forward * dist) + (Vector3.up * height);
+        camPos.position = target.position - (rot * Vector3.forward * distance) + (Vector3.up * height);
         camPos.LookAt(target);
     }
 }
