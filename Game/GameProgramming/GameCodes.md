@@ -33,8 +33,6 @@ public class PulinNoise : MonoBehaviour
     public bool test = false;
     void Update()
     {
-        if (!test)
-            return;
         for (int i = 0; i < BlockList.Count; i++)
         {
             float xCoord = (BlockList[i].transform.position.x) / waveLength;
