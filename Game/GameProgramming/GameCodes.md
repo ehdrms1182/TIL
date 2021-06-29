@@ -2,7 +2,8 @@
 ====
 
 # 펄린노이즈를 이용한 랜덤 맵 생성 알고리즘
-``` {.unity} using System.Collections;
+```{.unity}
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class PulinNoise : MonoBehaviour
