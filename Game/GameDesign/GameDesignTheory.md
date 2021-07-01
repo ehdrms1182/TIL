@@ -86,7 +86,7 @@
         개미 농장 효과
         -> 규칙의 설계자인 기획자가 플레이어보다 관객에 몰입하기 쉽기 때문이다
         ```
-        관련 링크 : [개미 농장 효과](https://m.blog.naver.com/PostView.nhn?blogId=badajoa2002&logNo=18438431&proxyReferer=https:%2F%2Fwww.google.com%2F, "Link")
+        관련 링크 : [개미 농장 효과](https://m.blog.naver.com/PostView.nhn?blogId=badajoa2002&logNo=18438431&proxyReferer=https:%2F%2Fwww.google.com%2F "Link")
              
         ### 2. 동기부여
         ```
@@ -542,7 +542,14 @@
         논쟁이 재발하는 횟수를 줄여준다.
         ```
     - ## 반복적으로, 점진적으로
-
+        ```
+        바로 다음에 예정되어진 개발 단계를 아주 상세하게 기획해야한다.
+        다른 개발 단계는 맨먼스 수준으로 간단하게 기획해야한다.
+        한참 뒤에 개발할 피처에 너무 집착하면 안됀다.
+        문서를 재검토하는것은 필수다.
+        ```
+        관련 링크 : [맨먼스](https://terms.naver.com/entry.naver?docId=2065210&cid=50305&categoryId=50305 "Link")
+        
     - ## 검색 가능하게
 
     - ## 자동화를 최대한 하자
