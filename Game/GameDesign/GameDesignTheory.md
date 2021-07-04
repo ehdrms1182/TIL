@@ -546,9 +546,9 @@
         바로 다음에 예정되어진 개발 단계를 아주 상세하게 기획해야한다.
         다른 개발 단계는 맨먼스 수준으로 간단하게 기획해야한다.
         한참 뒤에 개발할 피처에 너무 집착하면 안됀다.
-        문서를 재검토하는것은 필수다.
+        문서를 재검토하는것은 항상 해주도록 하자. 틀린 부분을 찾을 수도 있다.
         ```
-        관련 링크 : [맨먼스](https://terms.naver.com/entry.naver?docId=2065210&cid=50305&categoryId=50305 "Link")
+        관련 링크 : [맨 먼스](https://terms.naver.com/entry.naver?docId=2065210&cid=50305&categoryId=50305 "Link")
         
     - ## 검색 가능하게
         ```
@@ -593,3 +593,4 @@
 <br>
 
 참고자료 : [쩌는 게임기획서 이렇게 쓴다](https://www.slideshare.net/phploveme/ss-30557563 "PPT Link 3")
+<br>
