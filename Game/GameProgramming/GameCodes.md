@@ -109,7 +109,7 @@ public class ClickMove : MonoBehaviour
         SetLocation(character.transform.position);//시작 위치를 캐릭터 위치로 설정
     }
 
-    void Update()
+    void LateUpdate()
     {
         GetLocation();
         Move();
