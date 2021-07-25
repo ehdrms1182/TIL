@@ -638,13 +638,14 @@
         수명이 긴 게임이나 대형 프로젝트일수록, 문서의 최신 버전 관리가 중요하다.
         ```
 
-<br>
-
 참고자료 : [게임 기획 튜토리얼](https://www.slideshare.net/iyooha/2012-14158316 "PPT Link 1") 
 <br>
 
-참고자료 : [프로그래머에게 사랑받는 기획서](https://www.slideshare.net/iyooha/20101002-53482961 "PPT Link 2")
+참고자료 : [프로그래머에게 사랑받는 게임 기획서 작성법](https://www.slideshare.net/iyooha/20101002-53482961 "PPT Link 2")
 <br>
 
 참고자료 : [쩌는 게임기획서 이렇게 쓴다](https://www.slideshare.net/phploveme/ss-30557563 "PPT Link 3")
+<br>
+
+참고자료 : [게임제작개론 #8 제작 제작 프로세스](https://www.slideshare.net/sm9kr/8-22232004 "PPT Link 4")
 <br>
