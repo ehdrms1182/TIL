@@ -697,6 +697,13 @@
         프로젝트 팀원이 같은 목표로 나아갈 수 있게 하는 원동력이 되야한다.
         ```
     
+    - ## 프로세스
+        ```
+        1. Pre-Production
+        2. Production
+        3. Post-Production    
+        ```
+
 참고자료 : [게임 기획 튜토리얼](https://www.slideshare.net/iyooha/2012-14158316 "PPT Link 1") 
 <br>
 
