@@ -703,6 +703,19 @@
         2. Production
         3. Post-Production    
         ```
+    - ### Pre-Production
+        ```
+
+        ```
+    - ### Production
+        ```
+        
+        ```
+    - ### Post-Production
+        ```
+        
+        ```
+
 
 참고자료 : [게임 기획 튜토리얼](https://www.slideshare.net/iyooha/2012-14158316 "PPT Link 1") 
 <br>
@@ -713,7 +726,7 @@
 참고자료 : [쩌는 게임기획서 이렇게 쓴다](https://www.slideshare.net/phploveme/ss-30557563 "PPT Link 3")
 <br>
 
-참고자료 : [게임제작개론 #8 제작 제작 프로세스](https://www.slideshare.net/sm9kr/8-22232004 "PPT Link 4")
+참고자료 : [게임제작개론 #8 게임 제작 프로세스](https://www.slideshare.net/sm9kr/8-22232004 "PPT Link 4")
 <br>
 
 
