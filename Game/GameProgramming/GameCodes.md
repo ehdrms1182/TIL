@@ -72,11 +72,11 @@ public class FollowCam : MonoBehaviour
     void LateUpdate()
     {
 
-        float currYAngle = Mathf.LerpAngle(camPos.eulerAngles.y, target.eulerAngles.y, dampRotate * Time.deltaTime);
+        float currentYAngle = Mathf.LerpAngle(camPos.eulerAngles.y, target.eulerAngles.y, dampRotate * Time.deltaTime);
 
-        Quaternion rot = Quaternion.Euler(0, currYAngle, 0);
+        Quaternion rotate = Quaternion.Euler(0, currentYAngle, 0);
 
-        camPos.position = target.position - (rot * Vector3.forward * distance) + (Vector3.up * height);
+        camPos.position = target.position - (rotate * Vector3.forward * distance) + (Vector3.up * height);
         camPos.LookAt(target);
     }
 }
@@ -156,7 +156,7 @@ public class ClickMove : MonoBehaviour
 # 빈 게임 오브젝트를 Gizmos를 이용해 시각화하는 코드 
 # Gizmos -> Scene 안에 있는 게임 오브젝트 관련 그래픽
 ```{.unity}
-public class Gizmos : MonoBehaviour
+public class GizmosColor : MonoBehaviour
 {
     public Color color = Color.green; //Gizmos 색
     public float radius = 10f; //구의 반지름
@@ -281,47 +281,53 @@ public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
 ```{.unity}
 public class CameraShake : Monobehaviour
 {
-    [SerializeField]
+        [SerializeField]
     float force = 0f;
     Vector3 offset = Vector3.zero;
+    Quaternion originRotate;
+
+    private void Awake()
+    {
+        originRotate = transform.rotation;
+    }
 
     IEnumerator ShakeCoroutine()
     {
         Vector3 originEuler = transform.eulerAngles;
-        while(1)
+        while(true)
         {
-            float rotateX = Random.range(-offset.x,offset.x);
-            float rotateY = Random.range(-offset.y,offset.y);
-            float rotateZ = Random.range(-offset.z,offset.z);
+            float rotateX = Random.RandomRange(-offset.x, offset.x);
+            float rotateY = Random.RandomRange(-offset.y, offset.y);
+            float rotateZ = Random.RandomRange(-offset.z, offset.z);
 
-            Vector3 randomRotate = originEuler + new Vector3(rotateX,rotateY,rotateZ);
-            Quaternion rotate = Quaternion.Euler(randomRotate);
+            Vector3 randomRotate = originEuler + new Vector3(rotateX, rotateY, rotateZ);
+            Quaternion rotation = Quaternion.Euler(randomRotate);
 
-            while(Quaternion.Angle(transform.rotation, rotation)> 0.1f)
+            while (Quaternion.Angle(transform.rotation, rotation) > 0.1f)
             {
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation,force*Time.deltaTime);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, force * Time.deltaTime);
                 yield return null;
             }
             yield return null;
         }
-
-        IEnumerator Reset()
+    }
+    
+    private IEnumerator Reset()
+    {
+        while (Quaternion.Angle(transform.rotation, originRotate) > 0f)
         {
-            while(Quaternion.Angle(transform.rotation,originRotate)>0f)
-            {
-                transform.rotation = Quaternion.RotateToward(transform.rotation,originRotate,force*Time.deltaTime);
-            }
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, originRotate, force * Time.deltaTime);
         }
-
-        private void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.K))
-            {
-                StartCoroutine(ShakeCoroutine());
-            }
-        }
+        yield return null;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            StartCoroutine(ShakeCoroutine());
+        }
+    }
 }
 
 
