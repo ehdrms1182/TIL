@@ -67,8 +67,6 @@ public class FollowCam : MonoBehaviour
     {
         camPos = GetComponent<Transform>();
     }
-
-    // Update is called once per frame
     void LateUpdate()
     {
 
@@ -106,7 +104,7 @@ public class ClickMove : MonoBehaviour
     {
         layerMask = 1 << LayerMask.NameToLayer("Ground");
         cam = Camera.main;
-        SetLocation(character.transform.position);//시작 위치를 캐릭터 위치로 설정
+        SetLocation(character.transform.position); //시작 위치를 캐릭터 위치로 설정
     }
 
     void LateUpdate()
@@ -329,6 +327,5 @@ public class CameraShake : Monobehaviour
         }
     }
 }
-
 
 ```
