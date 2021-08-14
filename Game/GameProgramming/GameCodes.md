@@ -294,9 +294,9 @@ public class CameraShake : Monobehaviour
         Vector3 originEuler = transform.eulerAngles;
         while(true)
         {
-            float rotateX = Random.RandomRange(-offset.x, offset.x);
-            float rotateY = Random.RandomRange(-offset.y, offset.y);
-            float rotateZ = Random.RandomRange(-offset.z, offset.z);
+            float rotateX = Random.Range(-offset.x, offset.x);
+            float rotateY = Random.Range(-offset.y, offset.y);
+            float rotateZ = Random.Range(-offset.z, offset.z);
 
             Vector3 randomRotate = originEuler + new Vector3(rotateX, rotateY, rotateZ);
             Quaternion rotation = Quaternion.Euler(randomRotate);
