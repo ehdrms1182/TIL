@@ -47,21 +47,23 @@ public class PulinNoise : MonoBehaviour
 }
 ```
 
-# 카메라가 플레어이를 따라오게 만드는 스크립트
+# 카메라가 플레어이를 따라오게 만드는 스크립트 (3인칭)
 
 ```{.unity}
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowCam : MonoBehaviour
+public class CameraControl : MonoBehaviour
 {
-    public Transform target;
-    public float distance = 25.0f;
-    public float height = 50.0f;
-    public float dampRotate = 0.0f;
+    
+    public float distance = 25.0f; //카메라와 대상의 가까움의 정도
+    public float height = 50.0f; //카메라의 높이를 조정 가능
+    public float dampRotate = 0.0f; 
 
+    [SerializeField]
     private Transform camPos;
+    private Transform target;
 
     void Awake()
     {
@@ -69,7 +71,10 @@ public class FollowCam : MonoBehaviour
     }
     void LateUpdate()
     {
-
+        CameraFollow();
+    }
+    void CameraFollow()
+    {
         float currentYAngle = Mathf.LerpAngle(camPos.eulerAngles.y, target.eulerAngles.y, dampRotate * Time.deltaTime);
 
         Quaternion rotate = Quaternion.Euler(0, currentYAngle, 0);
@@ -81,6 +86,35 @@ public class FollowCam : MonoBehaviour
 ```
 
 
+# 카메라가 플레어이를 따라오게 만드는 스크립트 (1인칭)
+
+```{.unity}
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraControl : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject target;
+    private Vector3 offset;
+    private void LateUpdate()
+    {
+        CameraFollow();
+    }
+
+    private void CameraFollow()
+    {
+        Vector3 cameraPos = target.transform.position + offset;
+        Vector3 lerpPos = Vector3.Lerp(transform.position, cameraPos, 0.2f);
+
+        transform.position = lerpPos;
+        
+        transform.LookAt(target.transform);
+    }
+}
+
+```
 # 마우스 우클릭으로 원하는 방향으로 이동하는 스크립트
 
 ```{.unity}
@@ -328,4 +362,78 @@ public class CameraShake : Monobehaviour
     }
 }
 
+```
+
+
+# 슬라이더 게이지 충전/사용
+```{.unity}
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SliderTimer : MonoBehaviour
+{
+    public Slider timer;
+    public bool canCharging = true;
+
+    void Awake()
+    {
+        timer = GetComponent<Slider>();
+    }
+    private void Start()
+    {
+        timer = FindObjectOfType<Slider>();
+    }
+    void Update()
+    {
+        ChargeOn();
+    }
+    void ChargeOn()
+    {
+        Debug.Log($"Silder is {timer}"); //슬라이더 적용 체크 <- 게임 시작시 Silder가 none으로 바뀌는 버그
+        if (Input.GetKey(KeyCode.Q) && canCharging == true)
+        {
+            if (timer.value > 0)
+            {
+                // 시간이 변경한 만큼 slider Value 변경을 합니다.
+                timer.value -= Time.deltaTime;
+            }
+            else
+            {
+                
+                Debug.Log($"Time is {timer.value}");
+                if (timer.value == timer.minValue)
+                {
+                    Debug.Log("End");
+                    canCharging = false;
+                }
+                return;
+            }
+        }
+        else
+        {
+            if (timer.value == timer.maxValue)
+                StopCoroutine(ReCharge());
+            else
+            {
+                Debug.Log("ReCharging...");
+                StartCoroutine(ReCharge());
+            }
+
+        }
+    }
+    
+    IEnumerator ReCharge()
+    {
+        if (timer.value != timer.maxValue)
+            timer.value += time.deltaTime * 0.7f;
+        if (timer.value == timer.maxValue)
+        {
+            Debug.Log("Full");
+            yield return canCharging = true;
+        }
+        yield return null;
+    }
+}
 ```
