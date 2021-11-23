@@ -437,3 +437,16 @@ public class SliderTimer : MonoBehaviour
     }
 }
 ```
+```
+# 수직동기화/(모바일)화면 관리 함수
+public void OnApplicationSetting()
+{
+    // 수직동기화 끄기
+    QualitySettings.vSyncCount = 0;
+    // 렌더 프레임을 60으로 설정
+    Application.targetFrameRate = 60;
+    // 앱 실행 중 장시간 대기 시에도 화면이 꺼지지 않게
+    Screen.sleepTimeout = SleepTimeout.NeverSleep;
+}
+
+```
